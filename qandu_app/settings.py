@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,5 +116,5 @@ STATICFILES_DIRS = (os.path.join(MAIN_DIR, 'static'),)
 STATIC_ROOT = 'staticfiles'
 
 LOGIN_URL = 'user/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/question/'
 SITE_ID = 1
