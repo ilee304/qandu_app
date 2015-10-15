@@ -13,9 +13,9 @@ class QuestionCreateView(CreateView):
     fields = ['title', 'description']
     success_url = reverse_lazy('question_list')
 
-def form_valid(self, form):
-    form.instance.user = self.request.user
-    return super(QuestionCreateView, self).form_valid(form)
+    def form_valid(self, form):
+      form.instance.user = self.request.user
+      return super(QuestionCreateView, self).form_valid(form)
 
 class QuestionListView(ListView):
     model = Question
