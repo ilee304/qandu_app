@@ -112,7 +112,7 @@ class VoteFormView(FormView):
     user = self.request.user
     question = Question.objects.get(pk=form.data["question"])
     prev_votes = Vote.objects.filter(user=user, question=question)
-    has_voted = (prev_votes_count()>0)
+    has_voted = (prev_votes.count()>0)
     if not has_voted:
       Vote.objects.create(user=user, question=question)
     else:
