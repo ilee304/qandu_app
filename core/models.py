@@ -7,7 +7,6 @@ VISIBILITY_CHOICES = (
 (1, 'Anonymous'),
 )
 
-
 class Question(models.Model):
   title = models.CharField(max_length=300)
   description = models.TextField(null=True, blank=True)
